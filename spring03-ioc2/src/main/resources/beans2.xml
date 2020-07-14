@@ -16,7 +16,7 @@
 
     <!--第三种，直接通过参数名实现赋值-->
     <bean id="user" class="com.kuang.pojo.User">
-        <constructor-arg name="name" value="尹锐"/>
+        <constructor-arg name="name" value="kuang"/>
     </bean>
 
     <!--
@@ -24,7 +24,7 @@
     class：bean对象所对应的全限定名：包名+类名
     name:也是别名，而且name可以同时取多个别名
     -->
-    <bean id="userT" class="com.rui.pojo.UserT" name="user2 u2,u3;u4">
-        <property name="name" value="尹锐"/>
+    <bean id="userT" class="com.kuang.pojo.UserT" name="user2 u2,u3;u4">
+        <property name="name" value="kuangshen"/>
     </bean>
 </beans>
