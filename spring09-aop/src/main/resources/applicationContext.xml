@@ -15,19 +15,19 @@ https://www.springframework.org/schema/aop/spring-aop.xsd">
     <!--配置aop:需要导入aop的约束-->
 <!--    <aop:config>
         &lt;!&ndash;切入点：expression:表达式,execution(要执行的位置！)&ndash;&gt;
-        <aop:pointcut id="pointcut" expression="execution(* com.rui.service.UserServiceImpl.*(..))"/>
+        <aop:pointcut id="pointcut" expression="execution(* com.kuangng.service.UserServiceImpl.*(..))"/>
         &lt;!&ndash;执行环绕增强&ndash;&gt;
         <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
         <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>
     </aop:config>-->
 
 <!--    &lt;!&ndash;方式二：自定义类&ndash;&gt;
-    <bean id="diy" class="com.rui.diy.DiyPointCut"/>
+    <bean id="diy" class="com.kuangng.diy.DiyPointCut"/>
     <aop:config>
         &lt;!&ndash;自定义切面，ref要引用的类&ndash;&gt;
         <aop:aspect ref="diy">
             &lt;!&ndash;切入点&ndash;&gt;
-            <aop:pointcut id="point" expression="execution(* com.rui.service.UserServiceImpl.*(..))"/>
+            <aop:pointcut id="point" expression="execution(* com.kuangng.service.UserServiceImpl.*(..))"/>
             &lt;!&ndash;通知&ndash;&gt;
             <aop:before method="before" pointcut-ref="point"/>
             <aop:after method="after" pointcut-ref="point"/>

@@ -18,6 +18,8 @@
         <module>spring07-appconfig</module>
         <module>spring08-proxy</module>
         <module>spring09-aop</module>
+        <module>spring10-spring整合mybatis</module>
+        <module>spring11-transacation</module>
     </modules>
 
     <dependencies>
